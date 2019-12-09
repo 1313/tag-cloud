@@ -1,0 +1,14 @@
+{
+  "name": "tt",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "clear-console": "^1.1.0",
+    "is-url": "^1.2.4",
+    "isurl": "^4.0.1",
+    "pluralize": "^8.0.0",
+    "rxjs": "^6.5.3",
+    "twitter": "^1.7.1"
+  }
+}

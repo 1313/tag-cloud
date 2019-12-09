@@ -1,0 +1,13 @@
+.cloud {
+  display: grid;
+
+  grid-gap: 10px 15px;
+  grid-auto-columns: min-content;
+  grid-template-areas:
+    ". . a1 a2 a3 . ."
+    ". a4 a5 a6 a7 a8 .";
+
+  margin: 0 auto;
+}
+.cloud > * {
+}
