@@ -1,0 +1,32 @@
+version: "3.7"
+services:
+  base:
+    image: "tag-cloud_base"
+    entrypoint: echo 'NOOP'
+    build: .
+  client:
+    ports:
+      - "4321:80"
+    depends_on:
+      - base
+    build:
+      context: ./
+      dockerfile: ./client/Dockerfile
+    environment:
+      - SERVER_PORT=8080
+      - SERVER_HOST=127.0.0.1
+  server:
+    ports:
+      - "8080:8080"
+    depends_on:
+      - base
+    init: true
+    build:
+      context: ./
+      dockerfile: ./server/Dockerfile
+    environment:
+      - SERVER_PORT=8080
+      - CONSUMER_KEY=<CONSUMER_KEY>
+      - CONSUMER_SECRET=<CONSUMER_SECRET>
+      - ACCESS_TOKEN_KEY=<ACCESS_TOKEN_KEY>
+      - ACCESS_TOKEN_SECRET=<ACCESS_TOKEN_SECRET>

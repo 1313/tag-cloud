@@ -1,14 +1,25 @@
 {
-  "name": "tt",
-  "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
-  "dependencies": {
-    "clear-console": "^1.1.0",
-    "is-url": "^1.2.4",
-    "isurl": "^4.0.1",
-    "pluralize": "^8.0.0",
-    "rxjs": "^6.5.3",
-    "twitter": "^1.7.1"
+  "name": "client",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "client",
+    "server",
+    "common"
+  ],
+  "devDependencies": {
+    "@types/jest": "^24.0.23",
+    "jest": "24.9.0",
+    "nodemon": "^2.0.1",
+    "parcel": "^1.12.4",
+    "ts-jest": "^24.2.0",
+    "ts-node": "^8.5.4",
+    "typescript": "~3.7.2",
+    "wsrun": "^5.1.0"
+  },
+  "scripts": {
+    "start": "wsrun start",
+    "test": "jest",
+    "build": "docker-compose build"
   }
 }
